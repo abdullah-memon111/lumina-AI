@@ -1,0 +1,6 @@
+{
+  "name": "ArtisGen: AI Art Studio",
+  "description": "Create unique, high-quality digital art from text prompts using advanced AI image generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["imageGeneration"]
+}

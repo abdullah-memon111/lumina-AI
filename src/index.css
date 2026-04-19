@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg-deep: #08080a;
+  --color-bg-surface: #141417;
+  --color-accent: #3b82f6;
+  --color-accent-glow: rgba(59, 130, 246, 0.4);
+  --color-text-main: #f8fafc;
+  --color-text-dim: #94a3b8;
+  --color-border: #27272a;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-text-main font-sans antialiased selection:bg-accent/30;
+  }
+}
+
+@layer components {
+  .sidebar-label {
+    @apply text-[11px] font-semibold uppercase text-text-dim mb-3 block tracking-widest;
+  }
+
+  .sleek-input {
+    @apply bg-bg-deep border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent transition-all duration-200 placeholder:text-text-dim/30;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:brightness-110 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg shadow-accent-glow active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent border border-border hover:bg-white/5 text-text-main text-xs px-3 py-1.5 rounded transition-all;
+  }
+
+  .art-frame {
+    @apply w-full max-w-[560px] aspect-square bg-black rounded-xl shadow-[0_40px_100px_rgba(0,0,0,0.5)] border border-white/5 overflow-hidden relative;
+  }
+
+  .badge {
+    @apply text-[10px] bg-border px-2 py-1 rounded text-text-dim font-medium uppercase tracking-tighter;
+  }
+}
